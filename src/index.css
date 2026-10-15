@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-parchment: #F3EBDD;
+    --color-espresso: #29241F;
+    --color-forest: #4F5D48;
+    --color-terracotta: #B76E4D;
+    --color-sand: #D9CBB7;
+    --color-warm-white: #FAF8F3;
+
+    /* Legacy tokens mapped to new palette */
+    --color-ivory: #F3EBDD;
+    --color-charcoal: #29241F;
+    --color-olive: #4F5D48;
+    --color-warm-grey: #D9CBB7;
+    --color-burnt-orange: #B76E4D;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: var(--color-parchment);
+    color: var(--color-espresso);
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F3EBDD;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D9CBB7;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4F5D48;
+  }
+}
+
+/* Editorial subtle animations & typography refinements */
+.font-serif-italic {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+}
+
+/* Image zoom on hover */
+.img-editorial-zoom {
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-editorial-card:hover .img-editorial-zoom {
+  transform: scale(1.04);
+}
+
+/* Masonry grid support */
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+    column-gap: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+    column-gap: 2rem;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.75rem;
+}
