@@ -12,7 +12,7 @@ export default function CategoryCard({ category, featured = false, index = 0 }) 
       aria-label={`View ${category.title} gallery`}
     >
       {/* Image Container with Editorial Zoom */}
-      <div className={`relative overflow-hidden bg-espresso/10 ${featured ? 'h-80 sm:h-96' : 'h-72 sm:h-80'}`}>
+      <div className={`relative overflow-hidden bg-espresso/10 ${featured ? 'h-72 sm:h-80 md:h-96' : 'h-64 sm:h-72 md:h-80'}`}>
         <img
           src={category.coverImage}
           alt={category.coverAlt || category.title}
@@ -25,16 +25,16 @@ export default function CategoryCard({ category, featured = false, index = 0 }) 
         <div className="absolute inset-0 bg-gradient-to-t from-espresso/70 via-espresso/10 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
 
         {/* Top Badges */}
-        <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+        <div className="absolute top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 flex items-center justify-between pointer-events-none">
           {/* Photo Count Pill */}
-          <span className="inline-flex items-center space-x-1.5 px-3 py-1 bg-espresso/80 backdrop-blur-md text-warm-white text-[11px] uppercase tracking-wider rounded-full border border-sand/30">
-            <Camera size={12} className="text-terracotta" />
+          <span className="inline-flex items-center space-x-1.5 px-2.5 py-1 sm:px-3 sm:py-1 bg-espresso/80 backdrop-blur-md text-warm-white text-[10px] sm:text-[11px] uppercase tracking-wider rounded-full border border-sand/30">
+            <Camera size={11} className="text-terracotta" />
             <span>{category.photos.length} {category.photos.length === 1 ? 'Photograph' : 'Photographs'}</span>
           </span>
         </div>
 
-        {/* Bottom Hover Hint */}
-        <div className="absolute bottom-4 right-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+        {/* Bottom Hover Hint (Desktop) */}
+        <div className="hidden sm:block absolute bottom-4 right-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
           <div className="w-10 h-10 rounded-full bg-warm-white text-espresso flex items-center justify-center shadow-lg group-hover:bg-terracotta group-hover:text-warm-white transition-colors">
             <ArrowUpRight size={18} />
           </div>
@@ -42,25 +42,25 @@ export default function CategoryCard({ category, featured = false, index = 0 }) 
       </div>
 
       {/* Card Information */}
-      <div className="p-6 md:p-8 flex-1 flex flex-col justify-between bg-warm-white border-t border-sand/30">
-        <div className="space-y-2">
-          <div className="text-[11px] uppercase tracking-widest text-forest font-medium">
+      <div className="p-5 sm:p-6 md:p-8 flex-1 flex flex-col justify-between bg-warm-white border-t border-sand/30">
+        <div className="space-y-1.5 sm:space-y-2">
+          <div className="text-[10px] sm:text-[11px] uppercase tracking-widest text-forest font-medium">
             {category.subtitle || 'Series'}
           </div>
-          <h3 className="font-serif text-2xl sm:text-3xl text-espresso font-normal group-hover:text-terracotta transition-colors">
+          <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-espresso font-normal group-hover:text-terracotta transition-colors">
             {category.title}
           </h3>
-          <p className="text-sm text-espresso/80 font-light leading-relaxed line-clamp-2 pt-1 font-sans">
+          <p className="text-xs sm:text-sm text-espresso/80 font-light leading-relaxed line-clamp-2 pt-0.5 sm:pt-1 font-sans">
             {category.description}
           </p>
         </div>
 
-        <div className="mt-6 pt-4 border-t border-sand/30 flex items-center justify-between text-xs font-medium tracking-widest uppercase text-espresso/70">
+        <div className="mt-5 pt-3.5 sm:mt-6 sm:pt-4 border-t border-sand/30 flex items-center justify-between text-xs font-medium tracking-wider sm:tracking-widest uppercase text-espresso/70">
           <span className="group-hover:text-terracotta transition-colors flex items-center space-x-1.5">
             <span>Explore Gallery</span>
             <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
           </span>
-          <span className="text-[11px] text-forest/90 font-normal lowercase tracking-normal">
+          <span className="text-[10px] sm:text-[11px] text-forest/90 font-normal lowercase tracking-normal">
             full resolution view
           </span>
         </div>

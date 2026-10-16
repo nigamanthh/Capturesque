@@ -22,12 +22,16 @@
   html {
     scroll-behavior: smooth;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   body {
     background-color: var(--color-parchment);
     color: var(--color-espresso);
     overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
   }
 
   /* Custom scrollbar */
@@ -50,6 +54,15 @@
   }
 }
 
+/* Hide scrollbar for clean mobile swipeable pill rows */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Editorial subtle animations & typography refinements */
 .font-serif-italic {
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -68,13 +81,13 @@
 /* Masonry grid support */
 .masonry-grid {
   column-count: 1;
-  column-gap: 1.5rem;
+  column-gap: 1.25rem;
 }
 
 @media (min-width: 640px) {
   .masonry-grid {
     column-count: 2;
-    column-gap: 1.75rem;
+    column-gap: 1.5rem;
   }
 }
 
@@ -87,5 +100,12 @@
 
 .masonry-item {
   break-inside: avoid;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
 }
+
+@media (min-width: 640px) {
+  .masonry-item {
+    margin-bottom: 1.5rem;
+  }
+}
+

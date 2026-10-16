@@ -54,10 +54,10 @@ export default function Gallery({ category }) {
   };
 
   return (
-    <div className="pt-28 pb-24 md:pb-36 bg-parchment min-h-screen text-espresso">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <div className="pt-24 sm:pt-28 pb-16 sm:pb-24 md:pb-36 bg-parchment min-h-screen text-espresso">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
         {/* Navigation / Breadcrumb Header */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-10 pb-6 border-b border-sand/40">
+        <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-3 mb-8 sm:mb-10 pb-5 sm:pb-6 border-b border-sand/40">
           <button
             onClick={() => navigate('/#work')}
             className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-espresso hover:text-terracotta font-medium group transition-colors"
@@ -66,7 +66,7 @@ export default function Gallery({ category }) {
             <span>Back to All Stories</span>
           </button>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 self-start xs:self-auto">
             <button
               onClick={handleCopyLink}
               className="inline-flex items-center space-x-1.5 text-xs text-forest hover:text-espresso uppercase tracking-wider transition-colors"
@@ -83,23 +83,22 @@ export default function Gallery({ category }) {
         </div>
 
         {/* Gallery Title & Editorial Introduction */}
-        <div className="max-w-3xl mb-12 space-y-4">
-          <div className="text-xs uppercase tracking-widest-editorial text-forest font-medium">
+        <div className="max-w-3xl mb-8 sm:mb-12 space-y-3 sm:space-y-4">
+          <div className="text-[11px] sm:text-xs uppercase tracking-widest-editorial text-forest font-medium">
             {category.subtitle || 'Series'}
           </div>
-          <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-light text-espresso tracking-tight leading-none">
+          <h1 className="font-serif text-3xl sm:text-5xl lg:text-7xl font-light text-espresso tracking-tight leading-tight sm:leading-none">
             {category.title}
           </h1>
-          <p className="text-base sm:text-lg text-espresso/80 font-light leading-relaxed font-sans pt-2">
+          <p className="text-sm sm:text-base md:text-lg text-espresso/80 font-light leading-relaxed font-sans pt-1 sm:pt-2">
             {category.description}
           </p>
-
         </div>
 
         {/* Sub-series / Personality Filter Bar for Multi-Subject Collections (e.g. Celebs) */}
         {category.personalities && (
-          <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 pb-8 mb-10 border-b border-sand/40">
-            <span className="text-xs uppercase tracking-widest text-forest mr-2 flex items-center space-x-1.5 font-medium">
+          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-3 sm:pb-8 sm:flex-wrap mb-8 sm:mb-10 border-b border-sand/40">
+            <span className="text-xs uppercase tracking-widest text-forest mr-1 sm:mr-2 flex items-center space-x-1.5 font-medium shrink-0">
               <Filter size={13} />
               <span>Series:</span>
             </span>
@@ -112,7 +111,7 @@ export default function Gallery({ category }) {
                 <button
                   key={item.id}
                   onClick={() => setPersonalityFilter(item.id)}
-                  className={`px-3.5 py-1.5 text-xs tracking-wider uppercase font-medium rounded-full transition-all duration-200 flex items-center space-x-1.5 ${
+                  className={`px-3 sm:px-3.5 py-1.5 text-xs tracking-wider uppercase font-medium rounded-full transition-all duration-200 flex items-center space-x-1.5 shrink-0 whitespace-nowrap ${
                     personalityFilter === item.id
                       ? 'bg-espresso text-warm-white shadow-sm'
                       : 'bg-sand/35 text-espresso/80 hover:bg-sand/60'
@@ -149,7 +148,7 @@ export default function Gallery({ category }) {
               />
 
               {/* Hover Overlay with Editorial Meta */}
-              <div className="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5 text-warm-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-4 sm:p-5 text-warm-white">
                 <div className="flex justify-between items-start">
                   {photo.personality && (
                     <span className="text-[10px] uppercase tracking-wider px-2.5 py-1 bg-espresso/80 backdrop-blur-sm rounded-sm border border-sand/30 text-sand">
@@ -165,7 +164,7 @@ export default function Gallery({ category }) {
                   <span className="text-[10px] uppercase tracking-widest text-sand">
                     Frame #{idx + 1}
                   </span>
-                  <h4 className="font-serif text-lg font-normal leading-snug">
+                  <h4 className="font-serif text-base sm:text-lg font-normal leading-snug">
                     {photo.title || `Frame ${idx + 1}`}
                   </h4>
                   {photo.caption && (
@@ -180,7 +179,7 @@ export default function Gallery({ category }) {
         </div>
 
         {/* Bottom Gallery Navigation Bar */}
-        <div className="mt-20 pt-8 border-t border-sand/40 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-12 sm:mt-20 pt-6 sm:pt-8 border-t border-sand/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <button
             onClick={() => navigate('/#work')}
             className="inline-flex items-center space-x-2 text-xs uppercase tracking-widest text-espresso hover:text-terracotta font-medium group transition-colors"

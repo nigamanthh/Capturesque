@@ -4,31 +4,31 @@ import { Instagram, Camera } from 'lucide-react';
 
 export default function TeamSection() {
   return (
-    <section id="about" className="py-24 md:py-36 bg-warm-white border-b border-sand/40 text-espresso">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="about" className="py-16 sm:py-24 md:py-36 bg-warm-white border-b border-sand/40 text-espresso">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16 md:mb-24 space-y-4">
-          <div className="inline-flex items-center space-x-2 text-xs tracking-widest-editorial uppercase text-forest font-medium">
+        <div className="max-w-3xl mb-12 sm:mb-16 md:mb-24 space-y-3 sm:space-y-4">
+          <div className="inline-flex items-center space-x-2 text-[11px] sm:text-xs tracking-widest-editorial uppercase text-forest font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-terracotta" />
             <span>The Team Behind Capturesque</span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-6xl text-espresso font-light tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-espresso font-light tracking-tight leading-tight">
             Three perspectives. One frame at a time.
           </h2>
-          <p className="text-base sm:text-lg text-espresso/80 font-light leading-relaxed font-sans">
+          <p className="text-sm sm:text-base md:text-lg text-espresso/80 font-light leading-relaxed font-sans">
             We are Nigamanth, Dharani, and Fazil. While each of us brings a distinctive aesthetic sensibility — from raw cinematic motion to quiet candid glances and bold concert lighting — we operate as a unified creative team behind CAPTURESQUE.
           </p>
         </div>
 
         {/* 3 Distinct Profile Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {TEAM_MEMBERS.map((member, index) => (
             <div
               key={member.id}
-              className="group flex flex-col bg-parchment/60 border border-sand/50 p-6 sm:p-7 rounded-sm transition-all duration-500 hover:shadow-xl hover:border-forest/50"
+              className="group flex flex-col bg-parchment/60 border border-sand/50 p-5 sm:p-7 rounded-sm transition-all duration-500 hover:shadow-xl hover:border-forest/50"
             >
               {/* Portrait Container */}
-              <div className="relative aspect-[3/4] overflow-hidden bg-espresso/10 mb-6 border border-sand/40 rounded-sm">
+              <div className="relative aspect-[3/4] overflow-hidden bg-espresso/10 mb-5 sm:mb-6 border border-sand/40 rounded-sm">
                 <img
                   src={member.image}
                   alt={member.imageAlt || `Portrait of ${member.name}`}
@@ -41,8 +41,8 @@ export default function TeamSection() {
               </div>
 
               {/* Bio & Details */}
-              <div className="flex-1 flex flex-col justify-between space-y-4">
-                <div className="space-y-2">
+              <div className="flex-1 flex flex-col justify-between space-y-3.5 sm:space-y-4">
+                <div className="space-y-1.5 sm:space-y-2">
                   <div className="flex items-baseline justify-between">
                     <h3 className="font-serif text-2xl sm:text-3xl text-espresso font-normal">
                       {member.name}
@@ -53,18 +53,18 @@ export default function TeamSection() {
                   </div>
 
                   {/* Role */}
-                  <div className="text-xs uppercase tracking-widest text-terracotta font-medium">
+                  <div className="text-[11px] sm:text-xs uppercase tracking-widest text-terracotta font-medium">
                     {member.role}
                   </div>
 
                   {/* Biography */}
-                  <p className="text-sm text-espresso/80 font-light leading-relaxed font-sans pt-2">
+                  <p className="text-xs sm:text-sm text-espresso/80 font-light leading-relaxed font-sans pt-1 sm:pt-2">
                     {member.bio}
                   </p>
                 </div>
 
                 {/* Specialties tags */}
-                <div className="pt-4 border-t border-sand/30">
+                <div className="pt-3.5 sm:pt-4 border-t border-sand/30">
                   <div className="text-[10px] uppercase tracking-widest text-forest mb-2 font-medium">
                     Focus Areas
                   </div>
@@ -72,7 +72,7 @@ export default function TeamSection() {
                     {member.specialties.map((spec, sIdx) => (
                       <span
                         key={sIdx}
-                        className="px-2.5 py-1 text-[11px] bg-sand/35 text-espresso/80 rounded-sm font-sans"
+                        className="px-2 sm:px-2.5 py-1 text-[10px] sm:text-[11px] bg-sand/35 text-espresso/80 rounded-sm font-sans"
                       >
                         {spec}
                       </span>

@@ -12,26 +12,26 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-36 bg-espresso text-warm-white border-t border-sand/20">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="contact" className="py-16 sm:py-24 md:py-36 bg-espresso text-warm-white border-t border-sand/20">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16 md:mb-20">
-          <div className="inline-flex items-center space-x-2 text-xs tracking-widest-editorial uppercase text-sand font-medium">
+        <div className="max-w-3xl text-left md:text-center md:mx-auto space-y-3 sm:space-y-4 mb-12 sm:mb-16 md:mb-20">
+          <div className="inline-flex items-center space-x-2 text-[11px] sm:text-xs tracking-widest-editorial uppercase text-sand font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-terracotta" />
             <span>Get In Touch</span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-light text-warm-white tracking-tight leading-tight">
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-warm-white tracking-tight leading-tight">
             {STUDIO_CONFIG.contact.heading}
           </h2>
-          <p className="text-base sm:text-lg text-sand/85 font-light leading-relaxed font-sans max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-sand/85 font-light leading-relaxed font-sans max-w-2xl md:mx-auto">
             {STUDIO_CONFIG.contact.subheading}
           </p>
         </div>
 
         {/* 3 Prominent Editorial Direct Channel Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {/* Card 1: Direct Call & WhatsApp */}
-          <div className="group bg-espresso/70 border border-sand/30 p-8 rounded-sm flex flex-col justify-between space-y-6 hover:border-terracotta/70 transition-all duration-300 hover:shadow-2xl">
+          <div className="group bg-espresso/70 border border-sand/30 p-6 sm:p-8 rounded-sm flex flex-col justify-between space-y-6 hover:border-terracotta/70 transition-all duration-300 hover:shadow-2xl">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="inline-flex items-center space-x-2 text-[11px] uppercase tracking-wider text-sand/80 font-medium">
@@ -51,22 +51,22 @@ export default function ContactSection() {
               <div>
                 <a
                   href={`tel:${STUDIO_CONFIG.contact.phoneRaw}`}
-                  className="font-serif text-2xl sm:text-3xl text-warm-white hover:text-terracotta transition-colors block tracking-tight"
+                  className="font-serif text-2xl xs:text-3xl text-warm-white hover:text-terracotta transition-colors block tracking-tight break-words"
                 >
                   {STUDIO_CONFIG.contact.phone}
                 </a>
-                <div className="text-xs uppercase tracking-widest text-forest font-semibold mt-1.5">
+                <div className="text-xs uppercase tracking-widest text-sand/90 font-semibold mt-1.5">
                   {STUDIO_CONFIG.contact.contactPerson}
                 </div>
               </div>
             </div>
 
-            <div className="pt-4 border-t border-sand/20 flex flex-col sm:flex-row items-start sm:items-center gap-3 text-xs">
+            <div className="pt-4 border-t border-sand/20 flex flex-col xs:flex-row items-stretch xs:items-center gap-2.5 sm:gap-3 text-xs">
               <a
                 href={STUDIO_CONFIG.contact.whatsAppUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-1.5 bg-terracotta/90 hover:bg-forest text-warm-white px-4 py-2 rounded-sm transition-colors font-medium shadow-sm"
+                className="inline-flex items-center justify-center space-x-1.5 bg-terracotta/90 hover:bg-forest text-warm-white px-4 py-2.5 rounded-sm transition-colors font-medium shadow-sm w-full xs:w-auto"
               >
                 <MessageCircle size={13} />
                 <span>Chat on WhatsApp</span>
@@ -74,7 +74,7 @@ export default function ContactSection() {
               </a>
               <a
                 href={`tel:${STUDIO_CONFIG.contact.phoneRaw}`}
-                className="inline-flex items-center space-x-1 text-sand hover:text-warm-white px-2 py-2 transition-colors"
+                className="inline-flex items-center justify-center space-x-1 text-sand hover:text-warm-white px-3 py-2.5 transition-colors bg-sand/15 hover:bg-sand/30 rounded-sm border border-sand/30 w-full xs:w-auto font-medium"
               >
                 <span>Direct Call</span>
               </a>
@@ -82,7 +82,7 @@ export default function ContactSection() {
           </div>
 
           {/* Card 2: Instagram */}
-          <div className="group bg-espresso/70 border border-sand/30 p-8 rounded-sm flex flex-col justify-between space-y-6 hover:border-terracotta/70 transition-all duration-300 hover:shadow-2xl">
+          <div className="group bg-espresso/70 border border-sand/30 p-6 sm:p-8 rounded-sm flex flex-col justify-between space-y-6 hover:border-terracotta/70 transition-all duration-300 hover:shadow-2xl">
             <div className="space-y-4">
               <span className="inline-flex items-center space-x-2 text-[11px] uppercase tracking-wider text-sand/80 font-medium">
                 <Instagram size={14} className="text-terracotta" />
@@ -94,7 +94,7 @@ export default function ContactSection() {
                   href={STUDIO_CONFIG.contact.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-serif text-2xl sm:text-3xl text-warm-white hover:text-terracotta transition-colors block tracking-tight"
+                  className="font-serif text-2xl xs:text-3xl text-warm-white hover:text-terracotta transition-colors block tracking-tight break-words"
                 >
                   {STUDIO_CONFIG.contact.instagramHandle}
                 </a>
@@ -109,7 +109,7 @@ export default function ContactSection() {
                 href={STUDIO_CONFIG.contact.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-1.5 bg-sand/20 hover:bg-terracotta text-warm-white px-4 py-2 rounded-sm transition-colors font-medium border border-sand/30"
+                className="w-full xs:w-auto inline-flex items-center justify-center space-x-1.5 bg-sand/20 hover:bg-terracotta text-warm-white px-4 py-2.5 rounded-sm transition-colors font-medium border border-sand/30"
               >
                 <span>View Instagram</span>
                 <ArrowUpRight size={13} />
@@ -118,7 +118,7 @@ export default function ContactSection() {
           </div>
 
           {/* Card 3: Location / Commissions */}
-          <div className="group bg-espresso/70 border border-sand/30 p-8 rounded-sm flex flex-col justify-between space-y-6 hover:border-terracotta/70 transition-all duration-300 hover:shadow-2xl">
+          <div className="group bg-espresso/70 border border-sand/30 p-6 sm:p-8 rounded-sm flex flex-col justify-between space-y-6 hover:border-terracotta/70 transition-all duration-300 hover:shadow-2xl">
             <div className="space-y-4">
               <span className="inline-flex items-center space-x-2 text-[11px] uppercase tracking-wider text-sand/80 font-medium">
                 <MapPin size={14} className="text-terracotta" />
@@ -126,7 +126,7 @@ export default function ContactSection() {
               </span>
 
               <div>
-                <div className="font-serif text-2xl sm:text-3xl text-warm-white tracking-tight">
+                <div className="font-serif text-2xl xs:text-3xl text-warm-white tracking-tight">
                   India
                 </div>
                 <p className="text-xs text-sand/75 font-sans mt-1.5">
