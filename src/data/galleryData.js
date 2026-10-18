@@ -267,6 +267,24 @@ export const CATEGORIES = [
         caption: "A serene moment of contemplation amidst the ceremonial rhythm.",
         orientation: "portrait",
         ratio: 0.56
+      },
+      {
+        id: "wedding-4",
+        src: "/images/wedding/wedding4.jpg",
+        alt: "Bride and groom embracing affectionately before a circular floral wedding arch on the beach",
+        title: "Coastal Vows",
+        caption: "Tender embrace before a floral arch with the sea breeze in golden evening light.",
+        orientation: "landscape",
+        ratio: 1.78
+      },
+      {
+        id: "wedding-5",
+        src: "/images/wedding/wedding5.jpg",
+        alt: "Bride and groom smiling and laughing together beneath a floral wedding arch by the sea",
+        title: "Unscripted Joy",
+        caption: "Laughter and candid warmth framed by white blooms against the ocean horizon.",
+        orientation: "landscape",
+        ratio: 1.78
       }
     ]
   },
@@ -372,6 +390,42 @@ export const CATEGORIES = [
         caption: "Atmospheric perspective capturing sound, light, and audience harmony.",
         orientation: "landscape",
         ratio: 1.50
+      },
+      {
+        id: "lp-7",
+        src: "/images/live-performance/live-performance-7.jpg",
+        alt: "Female vocalist singing into microphone under deep blue stage lighting",
+        title: "Melodic Reverie",
+        caption: "Vocalist immersed in musical storytelling under saturated sapphire illumination.",
+        orientation: "portrait",
+        ratio: 0.67
+      },
+      {
+        id: "lp-8",
+        src: "/images/live-performance/live-performance-8.jpg",
+        alt: "Male vocalist delivering powerful performance with microphone on stage",
+        title: "Soulful Crescendo",
+        caption: "High-intensity vocal cadence captured amidst an electric cobalt backdrop.",
+        orientation: "portrait",
+        ratio: 0.67
+      },
+      {
+        id: "lp-9",
+        src: "/images/live-performance/live-performance-9.jpg",
+        alt: "Male singer with long hair and traditional attire singing passionately",
+        title: "Acoustic Folk Horizon",
+        caption: "Spirited stage presence and acoustic resonance in traditional attire.",
+        orientation: "portrait",
+        ratio: 0.67
+      },
+      {
+        id: "lp-10",
+        src: "/images/live-performance/live-performance-10.jpg",
+        alt: "Young flutist in pink attire performing bansuri flute solo on stage",
+        title: "Bamboo Whispers",
+        caption: "Ethereal classical flute performance framed by gentle stage illumination.",
+        orientation: "portrait",
+        ratio: 0.67
       }
     ]
   },
@@ -438,6 +492,15 @@ export const CATEGORIES = [
         caption: "A peak moment of motion frozen in graceful balance.",
         orientation: "landscape",
         ratio: 1.50
+      },
+      {
+        id: "classical-7",
+        src: "/images/classical/classical7.jpg",
+        alt: "Classical dancer in golden skirt performing expressive mudra on stage",
+        title: "Golden Swirl",
+        caption: "Fluid abhinaya and spinning golden drapery illuminated in stage spotlight.",
+        orientation: "portrait",
+        ratio: 0.67
       }
     ]
   },
