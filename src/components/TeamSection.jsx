@@ -1,6 +1,5 @@
 import React from 'react';
 import { TEAM_MEMBERS } from '../data/galleryData';
-import { Instagram, Camera } from 'lucide-react';
 
 export default function TeamSection() {
   return (
@@ -20,7 +19,7 @@ export default function TeamSection() {
           </p>
         </div>
 
-        {/* 3 Distinct Profile Cards */}
+        {/* 3 Profile Cards (Name and Photograph) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {TEAM_MEMBERS.map((member, index) => (
             <div
@@ -28,7 +27,7 @@ export default function TeamSection() {
               className="group flex flex-col bg-parchment/60 border border-sand/50 p-5 sm:p-7 rounded-sm transition-all duration-500 hover:shadow-xl hover:border-forest/50"
             >
               {/* Portrait Container */}
-              <div className="relative aspect-[3/4] overflow-hidden bg-espresso/10 mb-5 sm:mb-6 border border-sand/40 rounded-sm">
+              <div className="relative aspect-[3/4] overflow-hidden bg-espresso/10 mb-4 sm:mb-5 border border-sand/40 rounded-sm">
                 <img
                   src={member.image}
                   alt={member.imageAlt || `Portrait of ${member.name}`}
@@ -40,45 +39,14 @@ export default function TeamSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-espresso/40 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity" />
               </div>
 
-              {/* Bio & Details */}
-              <div className="flex-1 flex flex-col justify-between space-y-3.5 sm:space-y-4">
-                <div className="space-y-1.5 sm:space-y-2">
-                  <div className="flex items-baseline justify-between">
-                    <h3 className="font-serif text-2xl sm:text-3xl text-espresso font-normal">
-                      {member.name}
-                    </h3>
-                    <span className="text-xs font-mono text-forest">
-                      0{index + 1}
-                    </span>
-                  </div>
-
-                  {/* Role */}
-                  <div className="text-[11px] sm:text-xs uppercase tracking-widest text-terracotta font-medium">
-                    {member.role}
-                  </div>
-
-                  {/* Biography */}
-                  <p className="text-xs sm:text-sm text-espresso/80 font-light leading-relaxed font-sans pt-1 sm:pt-2">
-                    {member.bio}
-                  </p>
-                </div>
-
-                {/* Specialties tags */}
-                <div className="pt-3.5 sm:pt-4 border-t border-sand/30">
-                  <div className="text-[10px] uppercase tracking-widest text-forest mb-2 font-medium">
-                    Focus Areas
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {member.specialties.map((spec, sIdx) => (
-                      <span
-                        key={sIdx}
-                        className="px-2 sm:px-2.5 py-1 text-[10px] sm:text-[11px] bg-sand/35 text-espresso/80 rounded-sm font-sans"
-                      >
-                        {spec}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+              {/* Name */}
+              <div className="flex items-center justify-between pt-1">
+                <h3 className="font-serif text-2xl sm:text-3xl text-espresso font-normal group-hover:text-terracotta transition-colors">
+                  {member.name}
+                </h3>
+                <span className="text-xs font-mono text-forest">
+                  0{index + 1}
+                </span>
               </div>
             </div>
           ))}
